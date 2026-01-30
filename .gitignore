@@ -1,0 +1,14 @@
+# Unreal Engine Defaults
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+Build/
+.vs/
+*.sln
+*.xcodeproj
+*.xcworkspace
+
+# Operating System
+.DS_Store
+Thumbs.db
