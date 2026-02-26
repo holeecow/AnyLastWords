@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "CharacterTypes.h"
 #include "AnyLastWordsCharacter.generated.h"
 
 UCLASS()
@@ -21,8 +22,17 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	// Getter function for the character state
+	FORCEINLINE ECharacterState GetCharacterState() const { return CharacterState; }
+
+	UFUNCTION(BlueprintCallable)
+	void SetCharacterState(ECharacterState State) { CharacterState = State; }
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+
+private: 
+	ECharacterState CharacterState =  ECharacterState::ECS_Idle;
 };
