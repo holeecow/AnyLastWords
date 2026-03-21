@@ -34,5 +34,5 @@ protected:
 
 
 private: 
-	ECharacterState CharacterState =  ECharacterState::ECS_Idle;
+	ECharacterState CharacterState =  ECharacterState::ECS_Unequipped;
 };
