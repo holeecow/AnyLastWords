@@ -26,8 +26,17 @@ public:
 	// Getter function for the character state
 	FORCEINLINE ECharacterState GetCharacterState() const { return CharacterState; }
 
+	// Setter function for the character state
 	UFUNCTION(BlueprintCallable)
 	void SetCharacterState(ECharacterState State) { CharacterState = State; }
+
+	// Getter function for the action state
+	UFUNCTION(BlueprintCallable)
+	FORCEINLINE EActionState GetActionState() const { return ActionState; }
+
+	// Setter function for the action state
+	UFUNCTION(BlueprintCallable)
+	void SetActionState(EActionState State) { ActionState = State; }
 
 protected:
 	// Called when the game starts or when spawned
@@ -36,4 +45,5 @@ protected:
 
 private: 
 	ECharacterState CharacterState =  ECharacterState::ECS_Unequipped;
+	EActionState ActionState = EActionState::EAS_Unoccupied;
 };
