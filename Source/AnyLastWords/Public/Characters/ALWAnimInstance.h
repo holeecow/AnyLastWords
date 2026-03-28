@@ -22,7 +22,13 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	class AAnyLastWordsCharacter* AnyLastWordsCharacter;
 
+	UPROPERTY(BlueprintReadOnly)
+	class ABaseMinion* BaseMinion;
+
 	// Allow ECharacterState to be read in the animation blueprint but not modified
 	UPROPERTY(BlueprintReadOnly, Category = "Movement | Character State")
 	ECharacterState CharacterState;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Movement | Minion State")
+	EMinionState MinionState;
 };
